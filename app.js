@@ -52,48 +52,48 @@ const elavator = async () => {
   }
 
   const currentLift = Math.floor(Math.random() * 10) + 1;
-  await delayTime(2000);
+  await delayTime(1000);
   console.log(`Saat ini Lift berada di lantai : ${currentLift}`);
 
   if (startFloor === destinationFloor) {
-    await delayTime(2000);
+    await delayTime(1000);
     console.log("Anda sudah berada di lantai tujuan!");
     rl.close();
     return;
   }
-  await delayTime(2000);
+  await delayTime(1000);
   console.log("Mohon menunggu, lift akan segera bergerak menjemput Anda");
 
   if (currentLift <= startFloor) {
     for (let i = currentLift+1; i <= startFloor; i++) {
-      await delayTime(2000);
+      await delayTime(1000);
       console.log(`Lift naik ke lantai : ${i}`);
     }
   } else {
     for (let i = currentLift-1; i >= startFloor; i--) {
-      await delayTime(2000);
+      await delayTime(1000);
       console.log(`Lift turun ke lantai : ${i}`);
     }
   }
 
-  await delayTime(2000);
+  await delayTime(1000);
 
   console.log("Lift sudah sampai di lokasi penjemputan, pintu lift terbuka");
 
   if (startFloor <= destinationFloor) {
     for (let i = startFloor+1; i <= destinationFloor; i++) {
-      await delayTime(2000);
+      await delayTime(1000);
       console.log(`Lift naik ke lantai: ${i}`);
     }
   } else {
     for (let i = startFloor-1; i >= destinationFloor; i--) {
-      await delayTime(2000);
+      await delayTime(1000);
       console.log(`Lift turun ke lantai: ${i}`);
     }
   }
-  await delayTime(2000);
+  await delayTime(1000);
   console.log("Lift sudah sampai di lokasi tujuan, pintu lift terbuka");
-  await delayTime(2000);
+  await delayTime(1000);
   console.log("Terima kasih, anda sudah sampai di lantai tujuan");
 
   rl.close();
